@@ -37,6 +37,17 @@ dpinum=300
 import shutil
 
 folder_path = "./img_r"
+#如果没有文件夹就创建文件夹
+if not os.path.exists(imgpath):
+    os.mkdir(imgpath)
+    print('创建文件夹 '+imgpath+' 成功')
+else:
+    print('文件夹 '+imgpath+' 已存在')
+if not os.path.exists(folder_path):
+    os.mkdir(folder_path)
+    print('创建文件夹 '+folder_path+' 成功')
+else:
+    print('文件夹 '+folder_path+' 已存在')
 
 # 删除文件夹下的所有文件
 for filename in os.listdir(folder_path):
